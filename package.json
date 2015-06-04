@@ -1,0 +1,51 @@
+{
+    "name": "angular-annotorious",
+    "version": "1.0.0",
+    "title": "Angular Annotorious",
+    "description": "Angular directive for Colorbox, the jQuery lightbox and modal window plugin.",
+    "keywords": [
+        "image",
+        "annotation",
+        "annotorious",
+        "ui",
+        "angular"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/igorlino/angular-annotorious.git"
+    },
+    "author": {
+        "name": "Igor Lino",
+        "url": "http://igorlino.github.io/"
+    },
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Igor Lino",
+            "email": "igorlino@github.com",
+            "url": "https://github.com/igorlino"
+        }
+    ],
+    "bugs": "https://github.com/igorlino/angular-annotorious/issues",
+    "homepage": "http://igorlino.github.io/angular-annotorious/",
+    "docs": "http://igorlino.github.io/angular-annotorious/examples",
+    "demo": "http://igorlino.github.io/angular-annotorious/examples",
+    "dependencies": {
+        "jquery": ">=2.1.4",
+        "angular": "~1.3.4",
+        "annotorious-bower": "~0.6.3"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-cli": "~0.1.13",
+        "grunt-contrib-coffee": "^0.13.0",
+        "grunt-contrib-concat": "^0.5.1",
+        "grunt-contrib-jshint": "^0.11.2",
+        "grunt-contrib-uglify": "^0.9.1",
+        "grunt-contrib-watch": "^0.6.1"
+    },
+    "scripts": {
+        "test": "grunt travis --verbose"
+    },
+    "readmeFilename": "README.md"
+}

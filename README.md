@@ -16,43 +16,35 @@ Compatible with: jQuery 1.3.2+ in Firefox, Safari, Chrome, Opera, Internet Explo
 Via [Bower](http://bower.io/):
 
 ```bash
-bower install angular-colorbox
+bower install angular-annotorious
 ```
 
 Via [npm](https://www.npmjs.com/):
 
 ```bash
-npm install angular-colorbox
+npm install angular-annotorious
 ```
 
 In a browser:
 
 ```html
-<link rel="stylesheet" type="text/css" href="colorbox.css" media="screen" />
-<script src="jquery.colorbox.js"></script>
-<script src="colorbox-module.js"></script>
-<script src="colorbox-directive.js"></script>
+<link rel="stylesheet" type="text/css" href="annotorious.css" media="screen" />
+<script src="annotorious.js"></script>
+<script src="annotorious-module.js"></script>
+<script src="annotorious-directive.js"></script>
 ```
 
 ## Getting Started
 
-Include the Colorbox plug-in and the directive on a page.
+Include the Annotorious plug-in and the directive on a page.
 
 Basic
 ```html
- <img    src="path_to_image" 
-        colorbox
-        colorbox-src="path_to_large_image" />
+
 ```
 
-Extended
-```html
- <img   src="path_to_image" 
-        colorbox
-        colorbox-options="{href:'images/large/image1.jpg', opacity:0.5, title:'A nice colorbox' }"
-```
 
-For more information on how to setup and customise, [check the examples](http://igorlino.github.io/angular-colorbox/).
+For more information on how to setup and customise, [check the examples](http://igorlino.github.io/angular-annotorious/).
 
 ## License
 Licensed under MIT license.

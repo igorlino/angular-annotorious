@@ -1,4 +1,6 @@
 angular.module('annotoriousdemo', [
     'annotoriousdemo.controllers',
-    'annotorious'
+    'annotorious',
+    'ezplus',
+    'colorbox'
 ]);

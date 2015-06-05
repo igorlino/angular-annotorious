@@ -45,6 +45,9 @@
     <script src='https://rawgit.com/igorlino/angular-colorbox/master/js/colorbox.module.js'></script>
     <script src='https://rawgit.com/igorlino/angular-colorbox/master/js/colorbox.directive.js'></script>
 
+    <script src='https://rawgit.com/igorlino/angular-elevatezoom-plus/master/js/ezplus.module.js'></script>
+    <script src='https://rawgit.com/igorlino/angular-elevatezoom-plus/master/js/ezplus.directive.js'></script>
+
     <script src='../js/annotorious.module.js'></script>
     <script src='../js/annotorious.directive.js'></script>
 
@@ -110,11 +113,15 @@
             id="zoom_01"
             src="{{approot}}images/large/image1.jpg"
             width="400"
+
+            ez-plus
+            data-zoom-image="{{approot}}images/large/image1.jpg"
+
             colorbox
             colorbox-options="{href:'{{approot}}images/large/image1.jpg'}"
             />
 
-        <script>$("#zoom_01").ezPlus();</script>
+        <script>/*$("#zoom_01").ezPlus();*/</script>
 
         <hr/>
 
@@ -122,13 +129,17 @@
 
         <img
             id="zoom_01a"
-            src="{{approot}}mages/large/image2.jpg"
+            src="{{approot}}images/large/image2.jpg"
             width="400"
+
+            ez-plus
+            data-zoom-image="{{approot}}images/large/image2.jpg"
+
             colorbox
             colorbox-options="{href:'{{approot}}images/large/image2.jpg',  width:'75%', height:'75%'}"
             />
 
-        <script>$("#zoom_01a").ezPlus();</script>
+        <script>/*$("#zoom_01a").ezPlus();*/</script>
 
         <hr/>
 
@@ -139,20 +150,24 @@
              colorbox
              colorbox-selector=".img-group-01"
              colorbox-options="{rel:'img-group-01', slideshow:false, open:true}"
-             src="{{approot}}images/small/image1.jpg" data-zoom-image="{{approot}}images/large/image1.jpg"/>
+             src="{{approot}}images/small/image1.jpg"
+
+             ez-plus
+             data-zoom-image="{{approot}}images/large/image1.jpg"/>
 
         <div id="gallery_01">
             <a class="img-group-01"
-               ng-repeat="image in imagesForGallery"
-               data-image="{{approot}}{image.small}}"
-               data-zoom-image="{{approot}}{{image.large}}"
-               href="{{approot}}{{image.large}}">
-                <img ng-src="{{approot}}{{image.thumb}}"/>
+               ng-repeat="image2 in imagesForGallery"
+               data-image="{{approot}}{image2.small}}"
+               data-zoom-image="{{approot}}{{image2.large}}"
+               href="{{approot}}{{image2.large}}">
+                {{approot}}{{image2.large}}
+                <img ng-src="{{approot}}{{image2.thumb}}"/>
             </a>
         </div>
 
         <script type="text/javascript">
-            $(document).ready(function () {
+/*            $(document).ready(function () {
                 $("#zoom_03").ezPlus({
                     gallery: 'gallery_01',
                     cursor: 'pointer',
@@ -161,15 +176,10 @@
                     loadingIcon: "images/spinner.gif"
                 });
 
-                $("#zoom_03").bind("click", function (e) {
-                    var ez = $('#zoom_03').data('ezPlus');
-                    //ez.closeAll(); //NEW: This function force hides the lens, tint and window
-                    //$.fancybox(ez.getGalleryList());
-                    return false;
-                });
+
 
             });
-
+*/
         </script>
 
         <hr/>
@@ -182,20 +192,25 @@
              colorbox-selector=".img-group-02"
              colorbox-options="{rel:'img-group-02', slideshow:true, open:true}"
              src="{{approot}}images/small/image1.jpg"
+
+             ez-plus
              data-zoom-image="{{approot}}images/large/image1.jpg"/>
 
         <div id="gallery_04">
             <a class="img-group-02"
                ng-repeat="image in imagesForGallery"
+
                data-image="{{approot}}{{image.small}}"
                data-zoom-image="{{approot}}{{image.large}}"
+
                href="{{approot}}{{image.large}}">
+                {{approot}}{{image.large}}
                 <img ng-src="{{approot}}{{image.thumb}}"/>
             </a>
         </div>
 
         <script type="text/javascript">
-            $(document).ready(function () {
+            /*$(document).ready(function () {
                 $("#zoom_04").ezPlus({
                     gallery: 'gallery_04',
                     cursor: 'pointer',
@@ -205,7 +220,7 @@
                 });
 
             });
-
+*/
         </script>
     </div>
 

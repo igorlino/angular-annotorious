@@ -7,10 +7,12 @@
 
 Compatible with: jQuery 1.3.2+ in Firefox, Safari, Chrome, Opera, Internet Explorer 7+
 
-- Flexible Angular directive
 - Image Annotation
+- Angular directives to annotate individual images or a selection.
+- Angular service to access all the annotarious API
 - Appearance is controlled through CSS so it can be restyled.
 - BETA OpenSeadragon integration. ( web-based viewer for high-resolution zoomable images )
+
 ## Installation
 
 Via [Bower](http://bower.io/):
@@ -28,19 +30,52 @@ npm install angular-annotorious
 In a browser:
 
 ```html
-<link rel="stylesheet" type="text/css" href="annotorious.css" media="screen" />
-<script src="annotorious.js"></script>
-<script src="annotorious-module.js"></script>
-<script src="annotorious-directive.js"></script>
+<link rel="stylesheet" type="text/css" href="http://annotorious.github.com/latest/annotorious.css" media="screen" />
+<script src="http://annotorious.github.com/latest/annotorious.min.js"></script>
+<script src="angular-annotorious.js"></script>
 ```
 
 ## Getting Started
 
 Include the Annotorious plug-in and the directive on a page.
 
-Basic
+Basic with attribute
 ```html
+<img src="http://annotorious.github.io/img/splash-image-1.jpg" annotorious-annotate>
+```
 
+Basic with dynamic src
+```html
+{{imgURL=http://annotorious.github.io/img/splash-image-1.jpg}}
+
+<img ng-src="{{imgURL}}" annotorious-annotate>
+```
+
+Basic with tag
+```html
+<img id="anno1" src="http://annotorious.github.io/img/splash-image-1.jpg">
+
+<annotorious options="{annotationsFor:'#anno1'}" />
+```
+
+Dynamic Query URLs
+
+Do the image URLs change somehow between page load? (E.g. differences im the query string?)
+You can add a "data-original" attribute to the image. Annotorious will then use the value of this attribute as the identifier/src used to re-associate annotations with images. 
+
+```html
+<img  src="http://any.long.url/that-could-change.jpg?foo=randomtoken" 
+      data-original="stable-identifier-for-image"
+      annotorious-annotate>
+```
+
+
+Multiple with tag
+```html
+<img class="group" src="http://annotorious.github.io/img/splash-image-1.jpg">
+<img class="group" src="http://annotorious.github.io/img/splash-image-1.jpg">
+
+<annotorious options="{annotationsFor:'.group'}" />
 ```
 
 

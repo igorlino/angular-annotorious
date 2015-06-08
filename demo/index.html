@@ -99,35 +99,40 @@
     <div class="starter-template">
         <h1>Angular Annotorious Examples</h1>
 
-        <h2>Basic Annotorious modal example</h2>
-
-        <p class="lead">Use these examples as a way to quickly start any new web project that requires image zooming.</p>
+        <p class="lead">Use these examples as a way to quickly start any new web project that requires image annotation.</p>
 
 
-        <h2>Basic Click Example</h2>
+        <h2>Basic Annotation</h2>
 
-        <p>Click the thumbnail image.</p>
+        <p>Hover the image and annotate to your heart contents</p>
+
+        <img
+            id="anno_0"
+            width="500px"
+            ng-src="{{approot}}images/large/image5.jpg"
+            annotorious-annotate
+            />
+
+        <h2>Annotation with ColorBox</h2>
+
+        <p>Click the thumbnail image and annotate to your heart contents</p>
 
         <img
             id="zoom_01"
 
-            width="400"
-            ez-plus
-            ezp-model="zoomModel1"
-            ezp-options="zoomOptions"
-
+            width="500px"
+            ng-src='{{approot}}images/large/image4.jpg'
             />
 
         <colorbox
             box-for="#zoom_01"
             open="zoom01"
-            options="{href:'{{approot}}images/large/image1.jpg'}">
-
-        </colorbox>
+            options="{href:'{{approot}}images/large/image4.jpg', className:'colorbox-to-annotate'}"
+            on-complete="annotateColorbox" />
 
         <hr/>
 
-        <h2>Basic Annotorious modal example with Width/Height 75%</h2>
+        <h2>Annotation modal example with Width/Height 75%</h2>
 
         <img
             id="zoom_01a"
@@ -142,9 +147,8 @@
         <colorbox
             box-for="#zoom_01a"
             open="zoom01a"
-            options="{href:'{{approot}}images/large/image2.jpg',  width:'75%', height:'75%'}">
-
-        </colorbox>
+            options="{href:'{{approot}}images/large/image2.jpg',  width:'75%', height:'75%'}"
+            on-complete="annotateColorbox" />
 
         <hr/>
 
@@ -181,8 +185,8 @@
         <colorbox
             box-for=".img-group-01"
             open="zoom03"
-            options="{rel:'img-group-01', slideshow:false, open:false}">
-        </colorbox>
+            options="{rel:'img-group-01', slideshow:false, open:false}"
+            on-complete="annotateColorbox" />
 
         <hr/>
 

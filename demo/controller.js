@@ -1,5 +1,22 @@
 angular.module('annotoriousdemo.controllers', []).
-    controller('AnnotoriousCtrl', function ($scope,   $location) {
+    controller('AnnotoriousCtrl', function ($scope,   $location, colorboxService, annotoriousService) {
+
+        $scope.annotateColorbox = function() {
+            var photo=$("#cboxLoadedContent .cboxPhoto")[0];
+            if (photo.src) {
+                console.log('annotateColorbox ' + photo.src);
+                annotoriousService.destroy(photo.src);
+                annotoriousService.makeAnnotatable(photo);
+                var annotations = annotoriousService.getAnnotations(photo.src);
+                //console.log(annotations);
+                if (annotations && annotations.length>0) {
+                    //annotoriousService.makeAnnotatable(photo);
+                    annotoriousService.showAnnotations(photo.src);
+                    colorboxService.resize();
+                }
+
+            }
+        };
         $scope.imagesForGallery = [];
         $scope.setApproot = function(appRoot) {
             //only change when needed.

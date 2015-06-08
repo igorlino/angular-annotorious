@@ -2,13 +2,14 @@
     "name": "angular-annotorious",
     "version": "1.0.0",
     "title": "Angular Annotorious",
-    "description": "Angular directive for Colorbox, the jQuery lightbox and modal window plugin.",
+    "description": "Angular directive for Annotorius to start drawing and commenting to images on your Web page.",
     "keywords": [
         "image",
         "annotation",
         "annotorious",
         "ui",
-        "angular"
+        "angular",
+        "web"
     ],
     "repository": {
         "type": "git",

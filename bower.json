@@ -12,8 +12,7 @@
         }
     ],
     "main": [
-        "js/annotorious.directive.js",
-        "js/annotorious.module.js"
+        "js/angular-annotorious.js"
     ],
     "ignore": [
         "**/.*",

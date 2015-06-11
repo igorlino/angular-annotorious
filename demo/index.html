@@ -127,7 +127,7 @@
         <colorbox
             box-for="#zoom_01"
             open="zoom01"
-            options="{href:'{{approot}}images/large/image4.jpg', className:'colorbox-to-annotate'}"
+            options="{href: approot + 'images/large/image4.jpg', className:'colorbox-to-annotate'}"
             on-complete="annotateColorbox" />
 
         <hr/>
@@ -147,8 +147,7 @@
         <colorbox
             box-for="#zoom_01a"
             open="zoom01a"
-            options="{href:'{{approot}}images/large/image2.jpg',  width:'75%', height:'75%'}"
-            on-complete="annotateColorbox" />
+            options="annotateColorbox01a"/>
 
         <hr/>
 
@@ -185,8 +184,7 @@
         <colorbox
             box-for=".img-group-01"
             open="zoom03"
-            options="{rel:'img-group-01', slideshow:false, open:false}"
-            on-complete="annotateColorbox" />
+            options="annotateColorbox03" />
 
         <hr/>
 

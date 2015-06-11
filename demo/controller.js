@@ -1,24 +1,10 @@
 angular.module('annotoriousdemo.controllers', []).
-    controller('AnnotoriousCtrl', function ($scope,   $location, colorboxService, annotoriousService) {
+    controller('AnnotoriousCtrl', function ($scope, $location, colorboxService, annotoriousService) {
 
-        $scope.annotateColorbox = function() {
-            var photo=$("#cboxLoadedContent .cboxPhoto")[0];
-            if (photo.src) {
-                console.log('annotateColorbox ' + photo.src);
-                annotoriousService.destroy(photo.src);
-                annotoriousService.makeAnnotatable(photo);
-                var annotations = annotoriousService.getAnnotations(photo.src);
-                //console.log(annotations);
-                if (annotations && annotations.length>0) {
-                    //annotoriousService.makeAnnotatable(photo);
-                    annotoriousService.showAnnotations(photo.src);
-                    colorboxService.resize();
-                }
+        $scope.annotateColorbox01a = {};
 
-            }
-        };
         $scope.imagesForGallery = [];
-        $scope.setApproot = function(appRoot) {
+        $scope.setApproot = function (appRoot) {
             //only change when needed.
             if ($scope.approot && appRoot === $scope.approot) {
                 return;
@@ -58,13 +44,83 @@ angular.module('annotoriousdemo.controllers', []).
             $scope.zoomModelGallery01 = $scope.imagesForGallery[1];
             $scope.zoomModelGallery04 = $scope.imagesForGallery[3];
             $scope.zoomModelGallery05 = $scope.imagesForGallery[0];
+
+            angular.extend($scope.annotateColorbox01a,
+            {
+                href: appRoot + 'images/large/image2.jpg',
+                width: '75%',
+                height: '75%',
+                onComplete: function () {
+                    alert('onComplete01a ');
+                    var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+                    if (photo.src) {
+                        console.log('annotateColorbox ' + photo.src);
+                        //annotoriousService.destroy(photo.src);
+                        annotoriousService.makeAnnotatable(photo);
+                        var annotations = annotoriousService.getAnnotations(photo.src);
+                        //console.log(annotations);
+                        if (annotations && annotations.length > 0) {
+                            //annotoriousService.makeAnnotatable(photo);
+                            annotoriousService.showAnnotations(photo.src);
+                            colorboxService.resize();
+                        }
+
+                    }
+                },
+                onCleanup: function () {
+                    alert('onCleanupa ');
+                    var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+                    if (photo.src) {
+                        annotoriousService.destroy(photo.src);
+                    }
+                }
+            });
+
         };
 
         //default
         $scope.setApproot('');
 
-        //default
-        $scope.setApproot('');
+        $scope.annotateColorbox03 = {
+            rel: 'img-group-01',
+            slideshow: false,
+            open: false,
+            onComplete: function () {
+                alert('onComplete03 ');
+                var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+                if (photo.src) {
+                    console.log('annotateColorbox ' + photo.src);
+                    annotoriousService.destroy(photo.src);
+                    annotoriousService.makeAnnotatable(photo);
+                    var annotations = annotoriousService.getAnnotations(photo.src);
+                    //console.log(annotations);
+                    if (annotations && annotations.length > 0) {
+                        //annotoriousService.makeAnnotatable(photo);
+                        annotoriousService.showAnnotations(photo.src);
+                        colorboxService.resize();
+                    }
+
+                }
+            }
+        };
+
+        $scope.annotateColorbox = function () {
+            var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+            if (photo.src) {
+                console.log('annotateColorbox ' + photo.src);
+                annotoriousService.destroy(photo.src);
+                annotoriousService.makeAnnotatable(photo);
+                colorboxService.resize();
+                var annotations = annotoriousService.getAnnotations(photo.src);
+                //console.log(annotations);
+                if (annotations && annotations.length > 0) {
+                    //annotoriousService.makeAnnotatable(photo);
+                    annotoriousService.showAnnotations(photo.src);
+                    colorboxService.resize();
+                }
+
+            }
+        }
 
         $scope.zoomOptions = {
             scrollZoom: true,

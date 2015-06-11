@@ -73,6 +73,7 @@
       ng-controller="AnnotoriousCtrl"
       ng-init="setApproot('https://rawgit.com/igorlino/angular-annotorious/master/demo/');">
 
+
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -107,48 +108,47 @@
         <p>Hover the image and annotate to your heart contents</p>
 
         <img
-            id="anno_0"
-            width="500px"
-            ng-src="{{approot}}images/large/image5.jpg"
-            annotorious-annotate
-            />
+                id="anno_0"
+                width="500px"
+                ng-src="{{approot}}images/large/image5.jpg"
+                annotorious-annotate
+                />
 
         <h2>Annotation with ColorBox</h2>
 
         <p>Click the thumbnail image and annotate to your heart contents</p>
 
         <img
-            id="zoom_01"
+                id="zoom_01"
 
-            width="500px"
-            ng-src='{{approot}}images/large/image4.jpg'
-            />
+                width="500px"
+                ng-src='{{approot}}images/large/image4.jpg'
+                />
 
         <colorbox
-            box-for="#zoom_01"
-            open="zoom01"
-            options="{href:'{{approot}}images/large/image4.jpg', className:'colorbox-to-annotate'}"
-            on-complete="annotateColorbox" />
+                box-for="#zoom_01"
+                open="zoom01"
+                options="{href: approot + 'images/large/image4.jpg', className:'colorbox-to-annotate'}"
+                on-complete="annotateColorbox" />
 
         <hr/>
 
         <h2>Annotation modal example with Width/Height 75%</h2>
 
         <img
-            id="zoom_01a"
-            width="400"
+                id="zoom_01a"
+                width="400"
 
-            ez-plus
-            ezp-model="zoomModel2"
-            ezp-options="zoomOptions"
+                ez-plus
+                ezp-model="zoomModel2"
+                ezp-options="zoomOptions"
 
-            />
+                />
 
         <colorbox
-            box-for="#zoom_01a"
-            open="zoom01a"
-            options="{href:'{{approot}}images/large/image2.jpg',  width:'75%', height:'75%'}"
-            on-complete="annotateColorbox" />
+                box-for="#zoom_01a"
+                open="zoom01a"
+                options="annotateColorbox01a"/>
 
         <hr/>
 
@@ -180,13 +180,12 @@
              ez-plus
              ezp-model="zoomModelGallery01"
              ezp-options="zoomOptionsGallery01"
-            />
+                />
 
         <colorbox
-            box-for=".img-group-01"
-            open="zoom03"
-            options="{rel:'img-group-01', slideshow:false, open:false}"
-            on-complete="annotateColorbox" />
+                box-for=".img-group-01"
+                open="zoom03"
+                options="annotateColorbox03" />
 
         <hr/>
 

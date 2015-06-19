@@ -105,7 +105,7 @@ angular.module('annotoriousdemo.controllers', []).
             open: false,
             onComplete: function () {
                 console.log('03-complete');
-                var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+                var photo = colorboxService.getCurrentPhoto();
                 if (photo.src) {
                     console.log('annotateColorbox03 ' + photo.src);
                     annotoriousService.makeAnnotatable(photo);
@@ -129,7 +129,7 @@ angular.module('annotoriousdemo.controllers', []).
         };
 
         function annotatableImage() {
-            var photo = $("#cboxLoadedContent .cboxPhoto")[0];
+            var photo = colorboxService.getCurrentPhoto();
             if (photo && photo.src) {
                 //required
                 annotoriousService.reset(photo.src);

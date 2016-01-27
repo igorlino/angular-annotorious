@@ -78,8 +78,18 @@ Multiple with tag
 <annotorious options="{annotationsFor:'.group'}" />
 ```
 
-
 For more information on how to setup and customise, [check the examples](http://igorlino.github.io/angular-annotorious/).
+
+## Storage providers
+
+The storage provider examples are under 'src/storage-providers/'
+
+Their purpose is to save and load annotations to/from the local browser storage.
+
+It should give you an idea how to do it for other type of storage providers.
+
+If you create another storage provider, that ends up generic enough, you may like to contribute it for the angular-annotorious community, your are very welcome.
+
 
 ## License
 Licensed under MIT license.

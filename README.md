@@ -80,6 +80,41 @@ Multiple with tag
 
 For more information on how to setup and customise, [check the examples](http://igorlino.github.io/angular-annotorious/).
 
+## Using the angular annotarious service
+
+You may want for very good reasons to create annotations programmatically, or reset them all together.
+There is a very good angular service called 'annotoriousService' that helps you with that:
+
+Assuming you have an image <img> element that has a src attribute.
+```javascript
+var  photo = jQuery(document).find(".your-image")[0];
+```
+
+You could call:
+```javascript
+annotoriousService.makeAnnotatable(photo);
+```
+If you want to reset/reload all annotations in the page:
+```javascript
+annotoriousService.reset();
+```
+
+If you want to set the design of the annotation:
+```javascript
+annotoriousService.setProperties({
+            outline: '#00f',
+            stroke: '#ff0000',
+            fill: 'rgba(255, 0, 0, 0.3)',
+            'hi_stroke': '#00ff00',
+            'hi_fill': 'rgba(0, 255, 0, 0.3)'
+        });
+```
+
+You define which flow/lifecycle your application follows, and you may call the reset() method a bit more often.
+
+Saving is done transparently assuming you created a storage provider that uses the annotorious plugin lifecycle.
+
+
 ## Storage providers
 
 The storage provider examples are under 'src/storage-providers/'

@@ -1,6 +1,6 @@
 {
     "name": "angular-annotorious",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "title": "Angular Annotorious",
     "description": "Angular directive for Annotorius to start drawing and commenting to images on your Web page.",
     "keywords": [
@@ -34,7 +34,7 @@
     "dependencies": {
         "jquery": ">=2.1.4",
         "angular": "~1.3.4",
-        "annotorious-bower": "0.6.3b"
+        "annotorious-bower": "0.6.4"
     },
     "devDependencies": {
         "grunt": "^0.4.5",

@@ -110,20 +110,20 @@ annotoriousService.setProperties({
         });
 ```
 
-You define which flow/lifecycle your application follows, and you may call the reset() method a bit more often.
+All web applications define their flow/lifecycle. Therefore you may need to adapt the annotorious by calling the reset() method a bit more often.
 
 Saving is done transparently assuming you created a storage provider that uses the annotorious plugin lifecycle.
 
 
 ## Storage providers
 
-The storage provider examples are under 'src/storage-providers/'
+The storage provider examples are under [src/storage-providers/](https://github.com/igorlino/angular-annotorious/tree/master/js/storage-providers)
 
-Their purpose is to save and load annotations to/from the local browser storage.
+There is one example that shows how to save and load annotations to/from the local browser storage. Just as the example, all providers are plug-in for annotorious
 
 It should give you an idea how to do it for other type of storage providers.
 
-If you create another storage provider, that ends up generic enough, you may like to contribute it for the angular-annotorious community, your are very welcome.
+If you happen to create another interesting storage provider, that ends up generic enough, you may consider/like to contribute it for the angular-annotorious community, your are very welcome.
 
 
 ## License

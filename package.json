@@ -3,6 +3,7 @@
     "version": "1.0.6",
     "title": "Angular Annotorious",
     "description": "Angular directive for Annotorius to start drawing and commenting to images on your Web page.",
+    "main": "js/angular-annotorious.js",
     "keywords": [
         "image",
         "annotation",

@@ -3,6 +3,8 @@
 
 [Angular Annotorious](https://github.com/igorlino/angular-annotorious/) is directive for the image annotation library [Annotorious](http://annotorious.github.io/) plugin.
 
+[The demo page](http://igorlino.github.io/angular-annotorious/) shows different ways to use the annotations in the angular context.
+
 ## Features
 
 Compatible with: jQuery 1.3.2+ in Firefox, Safari, Chrome, Opera, Internet Explorer 7+

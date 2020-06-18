@@ -34,7 +34,7 @@
     "demo": "http://igorlino.github.io/angular-annotorious/examples",
     "dependencies": {
         "jquery": ">=2.1.4",
-        "angular": "~1.7.9",
+        "angular": "~1.8.0",
         "annotorious-bower": "0.6.4"
     },
     "devDependencies": {
